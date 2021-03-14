@@ -1,0 +1,650 @@
+Analysis & Synthesis report for DodgeBall
+Sun Mar 14 13:44:30 2021
+Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for Inferred Entity Instance: SillyGame:theGame|display:display_component|lpm_divide:Mod0
+ 14. Parameter Settings for Inferred Entity Instance: SillyGame:theGame|display:display_component|lpm_divide:Div0
+ 15. Parameter Settings for Inferred Entity Instance: SillyGame:theGame|gameclock:gameclock_component|lpm_mult:Mult0
+ 16. lpm_mult Parameter Settings by Entity Instance
+ 17. Port Connectivity Checks: "SillyGame:theGame"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Mar 14 13:44:30 2021       ;
+; Quartus Prime Version              ; 16.1.2 Build 203 01/18/2017 SJ Lite Edition ;
+; Revision Name                      ; DodgeBall                                   ;
+; Top-level Entity Name              ; DodgeBall                                   ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 2,766                                       ;
+;     Total combinational functions  ; 2,764                                       ;
+;     Dedicated logic registers      ; 173                                         ;
+; Total registers                    ; 173                                         ;
+; Total pins                         ; 73                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 4                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                                      ; DodgeBall          ; DodgeBall          ;
+; Family name                                                                ; MAX 10 FPGA        ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                            ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                        ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+---------+
+; ../sillygamepack.vhdl            ; yes             ; User VHDL File               ; /home/brian/Projects/x/DodgeBall/sillygamepack.vhdl                                 ;         ;
+; ../sillygame.vhdl                ; yes             ; User VHDL File               ; /home/brian/Projects/x/DodgeBall/sillygame.vhdl                                     ;         ;
+; ../randomizer.vhdl               ; yes             ; User VHDL File               ; /home/brian/Projects/x/DodgeBall/randomizer.vhdl                                    ;         ;
+; ../player.vhdl                   ; yes             ; User VHDL File               ; /home/brian/Projects/x/DodgeBall/player.vhdl                                        ;         ;
+; ../leddriver.vhdl                ; yes             ; User VHDL File               ; /home/brian/Projects/x/DodgeBall/leddriver.vhdl                                     ;         ;
+; ../inputcontroller.vhdl          ; yes             ; User VHDL File               ; /home/brian/Projects/x/DodgeBall/inputcontroller.vhdl                               ;         ;
+; ../hittest.vhdl                  ; yes             ; User VHDL File               ; /home/brian/Projects/x/DodgeBall/hittest.vhdl                                       ;         ;
+; ../gameclock.vhdl                ; yes             ; User VHDL File               ; /home/brian/Projects/x/DodgeBall/gameclock.vhdl                                     ;         ;
+; ../enemy.vhdl                    ; yes             ; User VHDL File               ; /home/brian/Projects/x/DodgeBall/enemy.vhdl                                         ;         ;
+; ../DodgeBall.v                   ; yes             ; User Verilog HDL File        ; /home/brian/Projects/x/DodgeBall/DodgeBall.v                                        ;         ;
+; ../display.vhdl                  ; yes             ; User VHDL File               ; /home/brian/Projects/x/DodgeBall/display.vhdl                                       ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; /home/brian/intelFPGA_lite/16.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; /home/brian/intelFPGA_lite/16.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; /home/brian/intelFPGA_lite/16.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal161.inc                   ; yes             ; Megafunction                 ; /home/brian/intelFPGA_lite/16.1/quartus/libraries/megafunctions/aglobal161.inc      ;         ;
+; db/lpm_divide_25o.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/brian/Projects/x/DodgeBall/QuartusFiles/db/lpm_divide_25o.tdf                 ;         ;
+; db/abs_divider_4dg.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/brian/Projects/x/DodgeBall/QuartusFiles/db/abs_divider_4dg.tdf                ;         ;
+; db/alt_u_div_ske.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/brian/Projects/x/DodgeBall/QuartusFiles/db/alt_u_div_ske.tdf                  ;         ;
+; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/brian/Projects/x/DodgeBall/QuartusFiles/db/add_sub_t3c.tdf                    ;         ;
+; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/brian/Projects/x/DodgeBall/QuartusFiles/db/add_sub_u3c.tdf                    ;         ;
+; db/lpm_abs_8b9.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/brian/Projects/x/DodgeBall/QuartusFiles/db/lpm_abs_8b9.tdf                    ;         ;
+; db/lpm_divide_fbo.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/brian/Projects/x/DodgeBall/QuartusFiles/db/lpm_divide_fbo.tdf                 ;         ;
+; db/abs_divider_kbg.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/brian/Projects/x/DodgeBall/QuartusFiles/db/abs_divider_kbg.tdf                ;         ;
+; db/alt_u_div_she.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/brian/Projects/x/DodgeBall/QuartusFiles/db/alt_u_div_she.tdf                  ;         ;
+; db/lpm_abs_o99.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/brian/Projects/x/DodgeBall/QuartusFiles/db/lpm_abs_o99.tdf                    ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; /home/brian/intelFPGA_lite/16.1/quartus/libraries/megafunctions/lpm_mult.tdf        ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; /home/brian/intelFPGA_lite/16.1/quartus/libraries/megafunctions/lpm_add_sub.inc     ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; /home/brian/intelFPGA_lite/16.1/quartus/libraries/megafunctions/multcore.inc        ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; /home/brian/intelFPGA_lite/16.1/quartus/libraries/megafunctions/bypassff.inc        ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; /home/brian/intelFPGA_lite/16.1/quartus/libraries/megafunctions/altshift.inc        ;         ;
+; db/mult_dks.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/brian/Projects/x/DodgeBall/QuartusFiles/db/mult_dks.tdf                       ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                      ;
++---------------------------------------------+--------------------------------------------------------------------+
+; Resource                                    ; Usage                                                              ;
++---------------------------------------------+--------------------------------------------------------------------+
+; Estimated Total logic elements              ; 2,766                                                              ;
+;                                             ;                                                                    ;
+; Total combinational functions               ; 2764                                                               ;
+; Logic element usage by number of LUT inputs ;                                                                    ;
+;     -- 4 input functions                    ; 841                                                                ;
+;     -- 3 input functions                    ; 778                                                                ;
+;     -- <=2 input functions                  ; 1145                                                               ;
+;                                             ;                                                                    ;
+; Logic elements by mode                      ;                                                                    ;
+;     -- normal mode                          ; 1750                                                               ;
+;     -- arithmetic mode                      ; 1014                                                               ;
+;                                             ;                                                                    ;
+; Total registers                             ; 173                                                                ;
+;     -- Dedicated logic registers            ; 173                                                                ;
+;     -- I/O registers                        ; 0                                                                  ;
+;                                             ;                                                                    ;
+; I/O pins                                    ; 73                                                                 ;
+;                                             ;                                                                    ;
+; Embedded Multiplier 9-bit elements          ; 4                                                                  ;
+;                                             ;                                                                    ;
+; Maximum fan-out node                        ; SillyGame:theGame|Player:player_component|\score_proc:newScore[31] ;
+; Maximum fan-out                             ; 191                                                                ;
+; Total fan-out                               ; 8612                                                               ;
+; Average fan-out                             ; 2.79                                                               ;
++---------------------------------------------+--------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                           ;
++---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                 ; Entity Name     ; Library Name ;
++---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |DodgeBall                                        ; 2764 (1)            ; 173 (0)                   ; 0           ; 0          ; 4            ; 0       ; 2         ; 73   ; 0            ; 0          ; |DodgeBall                                                                                                                                          ; DodgeBall       ; work         ;
+;    |SillyGame:theGame|                            ; 2763 (0)            ; 173 (0)                   ; 0           ; 0          ; 4            ; 0       ; 2         ; 0    ; 0            ; 0          ; |DodgeBall|SillyGame:theGame                                                                                                                        ; SillyGame       ; work         ;
+;       |Player:player_component|                   ; 34 (34)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DodgeBall|SillyGame:theGame|Player:player_component                                                                                                ; Player          ; work         ;
+;       |display:display_component|                 ; 2355 (193)          ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DodgeBall|SillyGame:theGame|display:display_component                                                                                              ; display         ; work         ;
+;          |lpm_divide:Div0|                        ; 484 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DodgeBall|SillyGame:theGame|display:display_component|lpm_divide:Div0                                                                              ; lpm_divide      ; work         ;
+;             |lpm_divide_fbo:auto_generated|       ; 484 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DodgeBall|SillyGame:theGame|display:display_component|lpm_divide:Div0|lpm_divide_fbo:auto_generated                                                ; lpm_divide_fbo  ; work         ;
+;                |abs_divider_kbg:divider|          ; 484 (35)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DodgeBall|SillyGame:theGame|display:display_component|lpm_divide:Div0|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg ; work         ;
+;                   |alt_u_div_she:divider|         ; 449 (449)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DodgeBall|SillyGame:theGame|display:display_component|lpm_divide:Div0|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider  ; alt_u_div_she   ; work         ;
+;          |lpm_divide:Mod0|                        ; 1678 (0)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DodgeBall|SillyGame:theGame|display:display_component|lpm_divide:Mod0                                                                              ; lpm_divide      ; work         ;
+;             |lpm_divide_25o:auto_generated|       ; 1678 (0)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DodgeBall|SillyGame:theGame|display:display_component|lpm_divide:Mod0|lpm_divide_25o:auto_generated                                                ; lpm_divide_25o  ; work         ;
+;                |abs_divider_4dg:divider|          ; 1678 (64)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DodgeBall|SillyGame:theGame|display:display_component|lpm_divide:Mod0|lpm_divide_25o:auto_generated|abs_divider_4dg:divider                        ; abs_divider_4dg ; work         ;
+;                   |alt_u_div_ske:divider|         ; 1566 (1566)         ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DodgeBall|SillyGame:theGame|display:display_component|lpm_divide:Mod0|lpm_divide_25o:auto_generated|abs_divider_4dg:divider|alt_u_div_ske:divider  ; alt_u_div_ske   ; work         ;
+;                   |lpm_abs_8b9:my_abs_num|        ; 48 (48)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DodgeBall|SillyGame:theGame|display:display_component|lpm_divide:Mod0|lpm_divide_25o:auto_generated|abs_divider_4dg:divider|lpm_abs_8b9:my_abs_num ; lpm_abs_8b9     ; work         ;
+;       |enemy:enemy1_component|                    ; 121 (121)           ; 67 (67)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DodgeBall|SillyGame:theGame|enemy:enemy1_component                                                                                                 ; enemy           ; work         ;
+;       |gameclock:gameclock_component|             ; 189 (175)           ; 66 (66)                   ; 0           ; 0          ; 4            ; 0       ; 2         ; 0    ; 0            ; 0          ; |DodgeBall|SillyGame:theGame|gameclock:gameclock_component                                                                                          ; gameclock       ; work         ;
+;          |lpm_mult:Mult0|                         ; 14 (0)              ; 0 (0)                     ; 0           ; 0          ; 4            ; 0       ; 2         ; 0    ; 0            ; 0          ; |DodgeBall|SillyGame:theGame|gameclock:gameclock_component|lpm_mult:Mult0                                                                           ; lpm_mult        ; work         ;
+;             |mult_dks:auto_generated|             ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 4            ; 0       ; 2         ; 0    ; 0            ; 0          ; |DodgeBall|SillyGame:theGame|gameclock:gameclock_component|lpm_mult:Mult0|mult_dks:auto_generated                                                   ; mult_dks        ; work         ;
+;       |hittest:hittest_component|                 ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DodgeBall|SillyGame:theGame|hittest:hittest_component                                                                                              ; hittest         ; work         ;
+;       |inputcontroller:inputcontroller_component| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DodgeBall|SillyGame:theGame|inputcontroller:inputcontroller_component                                                                              ; inputcontroller ; work         ;
+;       |leddriver:leddriver_component|             ; 55 (55)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DodgeBall|SillyGame:theGame|leddriver:leddriver_component                                                                                          ; leddriver       ; work         ;
+;       |randomizer:randomizer_component|           ; 6 (6)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DodgeBall|SillyGame:theGame|randomizer:randomizer_component                                                                                        ; randomizer      ; work         ;
++---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 0           ;
+; Simple Multipliers (18-bit)           ; 2           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 4           ;
+; Signed Embedded Multipliers           ; 1           ;
+; Unsigned Embedded Multipliers         ; 0           ;
+; Mixed Sign Embedded Multipliers       ; 1           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                 ;
++----------------------------------------------------------------------+---------------------+------------------------+
+; Latch Name                                                           ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------------------------+---------------------+------------------------+
+; SillyGame:theGame|Player:player_component|p1.row$latch               ; GND                 ; yes                    ;
+; SillyGame:theGame|gameclock:gameclock_component|\gclkproc:clockState ; GND                 ; yes                    ;
+; Number of user-specified and inferred latches = 2                    ;                     ;                        ;
++----------------------------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 173   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 32    ;
+; Number of registers using Asynchronous Clear ; 98    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 99    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------+
+; Inverted Register Statistics                                         ;
++------------------------------------------------------------+---------+
+; Inverted Register                                          ; Fan out ;
++------------------------------------------------------------+---------+
+; SillyGame:theGame|enemy:enemy1_component|enemy1.alive~reg0 ; 9       ;
+; SillyGame:theGame|randomizer:randomizer_component|qt[7]    ; 4       ;
+; SillyGame:theGame|enemy:enemy1_component|\enemyProc:ttl[3] ; 1       ;
+; SillyGame:theGame|enemy:enemy1_component|\enemyProc:ttl[0] ; 1       ;
+; SillyGame:theGame|randomizer:randomizer_component|qt[4]    ; 2       ;
+; SillyGame:theGame|randomizer:randomizer_component|qt[1]    ; 1       ;
+; SillyGame:theGame|randomizer:randomizer_component|qt[6]    ; 1       ;
+; Total number of inverted registers = 7                     ;         ;
++------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |DodgeBall|SillyGame:theGame|enemy:enemy1_component|enemy1.column[10]~reg0 ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |DodgeBall|SillyGame:theGame|display:display_component|SSDISP[0][5]        ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |DodgeBall|SillyGame:theGame|display:display_component|SSDISP[1][5]        ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |DodgeBall|SillyGame:theGame|display:display_component|SSDISP[0][4]        ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |DodgeBall|SillyGame:theGame|display:display_component|SSDISP[1][3]        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: SillyGame:theGame|display:display_component|lpm_divide:Mod0 ;
++------------------------+----------------+--------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                               ;
++------------------------+----------------+--------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                            ;
+; LPM_WIDTHD             ; 32             ; Untyped                                                            ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                            ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                            ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                            ;
+; CBXI_PARAMETER         ; lpm_divide_25o ; Untyped                                                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                     ;
++------------------------+----------------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: SillyGame:theGame|display:display_component|lpm_divide:Div0 ;
++------------------------+----------------+--------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                               ;
++------------------------+----------------+--------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                            ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                            ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                            ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                            ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                            ;
+; CBXI_PARAMETER         ; lpm_divide_fbo ; Untyped                                                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                     ;
++------------------------+----------------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: SillyGame:theGame|gameclock:gameclock_component|lpm_mult:Mult0 ;
++------------------------------------------------+----------+-----------------------------------------------------+
+; Parameter Name                                 ; Value    ; Type                                                ;
++------------------------------------------------+----------+-----------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY                                          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY                                        ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE                                        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE                                      ;
+; LPM_WIDTHA                                     ; 32       ; Untyped                                             ;
+; LPM_WIDTHB                                     ; 18       ; Untyped                                             ;
+; LPM_WIDTHP                                     ; 50       ; Untyped                                             ;
+; LPM_WIDTHR                                     ; 50       ; Untyped                                             ;
+; LPM_WIDTHS                                     ; 1        ; Untyped                                             ;
+; LPM_REPRESENTATION                             ; SIGNED   ; Untyped                                             ;
+; LPM_PIPELINE                                   ; 0        ; Untyped                                             ;
+; LATENCY                                        ; 0        ; Untyped                                             ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped                                             ;
+; INPUT_B_IS_CONSTANT                            ; YES      ; Untyped                                             ;
+; USE_EAB                                        ; OFF      ; Untyped                                             ;
+; MAXIMIZE_SPEED                                 ; 5        ; Untyped                                             ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped                                             ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped                                             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K                                 ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped                                             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped                                             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped                                             ;
+; CBXI_PARAMETER                                 ; mult_dks ; Untyped                                             ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped                                             ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped                                             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped                                             ;
++------------------------------------------------+----------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                                         ;
++---------------------------------------+----------------------------------------------------------------+
+; Name                                  ; Value                                                          ;
++---------------------------------------+----------------------------------------------------------------+
+; Number of entity instances            ; 1                                                              ;
+; Entity Instance                       ; SillyGame:theGame|gameclock:gameclock_component|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 32                                                             ;
+;     -- LPM_WIDTHB                     ; 18                                                             ;
+;     -- LPM_WIDTHP                     ; 50                                                             ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                                         ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                             ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                                            ;
+;     -- USE_EAB                        ; OFF                                                            ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                           ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                             ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                             ;
++---------------------------------------+----------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SillyGame:theGame"                                                                       ;
++------+--------+------------------+----------------------------------------------------------------------------------+
+; Port ; Type   ; Severity         ; Details                                                                          ;
++------+--------+------------------+----------------------------------------------------------------------------------+
+; disp ; Output ; Critical Warning ; Can't connect expression with 1 array dimensions to port with 2 array dimensions ;
++------+--------+------------------+----------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 73                          ;
+; cycloneiii_ff         ; 173                         ;
+;     CLR               ; 66                          ;
+;     ENA               ; 67                          ;
+;     ENA CLR SLD       ; 32                          ;
+;     plain             ; 8                           ;
+; cycloneiii_lcell_comb ; 2779                        ;
+;     arith             ; 1014                        ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 275                         ;
+;         3 data inputs ; 738                         ;
+;     normal            ; 1765                        ;
+;         0 data inputs ; 62                          ;
+;         1 data inputs ; 31                          ;
+;         2 data inputs ; 791                         ;
+;         3 data inputs ; 40                          ;
+;         4 data inputs ; 841                         ;
+; cycloneiii_mac_mult   ; 2                           ;
+; cycloneiii_mac_out    ; 2                           ;
+;                       ;                             ;
+; Max LUT depth         ; 133.30                      ;
+; Average LUT depth     ; 94.03                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:07     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
+    Info: Processing started: Sun Mar 14 13:44:01 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DodgeBall -c DodgeBall
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 0 entities, in source file /home/brian/Projects/x/DodgeBall/sillygamepack.vhdl
+    Info (12022): Found design unit 1: SillyGamePack File: /home/brian/Projects/x/DodgeBall/sillygamepack.vhdl Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /home/brian/Projects/x/DodgeBall/sillygame.vhdl
+    Info (12022): Found design unit 1: SillyGame-SillyGame_arch File: /home/brian/Projects/x/DodgeBall/sillygame.vhdl Line: 16
+    Info (12023): Found entity 1: SillyGame File: /home/brian/Projects/x/DodgeBall/sillygame.vhdl Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /home/brian/Projects/x/DodgeBall/randomizer.vhdl
+    Info (12022): Found design unit 1: randomizer-randomizer_arch File: /home/brian/Projects/x/DodgeBall/randomizer.vhdl Line: 13
+    Info (12023): Found entity 1: randomizer File: /home/brian/Projects/x/DodgeBall/randomizer.vhdl Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /home/brian/Projects/x/DodgeBall/player.vhdl
+    Info (12022): Found design unit 1: Player-Player_arch File: /home/brian/Projects/x/DodgeBall/player.vhdl Line: 15
+    Info (12023): Found entity 1: Player File: /home/brian/Projects/x/DodgeBall/player.vhdl Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /home/brian/Projects/x/DodgeBall/leddriver.vhdl
+    Info (12022): Found design unit 1: leddriver-leddriver_arch File: /home/brian/Projects/x/DodgeBall/leddriver.vhdl Line: 13
+    Info (12023): Found entity 1: leddriver File: /home/brian/Projects/x/DodgeBall/leddriver.vhdl Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /home/brian/Projects/x/DodgeBall/inputcontroller.vhdl
+    Info (12022): Found design unit 1: inputcontroller-inputcontroller_arch File: /home/brian/Projects/x/DodgeBall/inputcontroller.vhdl Line: 18
+    Info (12023): Found entity 1: inputcontroller File: /home/brian/Projects/x/DodgeBall/inputcontroller.vhdl Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /home/brian/Projects/x/DodgeBall/hittest.vhdl
+    Info (12022): Found design unit 1: hittest-hittest_arch File: /home/brian/Projects/x/DodgeBall/hittest.vhdl Line: 15
+    Info (12023): Found entity 1: hittest File: /home/brian/Projects/x/DodgeBall/hittest.vhdl Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /home/brian/Projects/x/DodgeBall/gameclock.vhdl
+    Info (12022): Found design unit 1: gameclock-gameclock_arch File: /home/brian/Projects/x/DodgeBall/gameclock.vhdl Line: 21
+    Info (12023): Found entity 1: gameclock File: /home/brian/Projects/x/DodgeBall/gameclock.vhdl Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /home/brian/Projects/x/DodgeBall/enemy.vhdl
+    Info (12022): Found design unit 1: enemy-enemy_arch File: /home/brian/Projects/x/DodgeBall/enemy.vhdl Line: 20
+    Info (12023): Found entity 1: enemy File: /home/brian/Projects/x/DodgeBall/enemy.vhdl Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /home/brian/Projects/x/DodgeBall/DodgeBall.v
+    Info (12023): Found entity 1: DodgeBall File: /home/brian/Projects/x/DodgeBall/DodgeBall.v Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /home/brian/Projects/x/DodgeBall/display.vhdl
+    Info (12022): Found design unit 1: display-display_arch File: /home/brian/Projects/x/DodgeBall/display.vhdl Line: 16
+    Info (12023): Found entity 1: display File: /home/brian/Projects/x/DodgeBall/display.vhdl Line: 9
+Info (12127): Elaborating entity "DodgeBall" for the top level hierarchy
+Info (12128): Elaborating entity "SillyGame" for hierarchy "SillyGame:theGame" File: /home/brian/Projects/x/DodgeBall/DodgeBall.v Line: 44
+Info (12128): Elaborating entity "inputcontroller" for hierarchy "SillyGame:theGame|inputcontroller:inputcontroller_component" File: /home/brian/Projects/x/DodgeBall/sillygame.vhdl Line: 105
+Info (12128): Elaborating entity "Player" for hierarchy "SillyGame:theGame|Player:player_component" File: /home/brian/Projects/x/DodgeBall/sillygame.vhdl Line: 106
+Info (10041): Inferred latch for "p1.row" at player.vhdl(18) File: /home/brian/Projects/x/DodgeBall/player.vhdl Line: 18
+Info (12128): Elaborating entity "enemy" for hierarchy "SillyGame:theGame|enemy:enemy1_component" File: /home/brian/Projects/x/DodgeBall/sillygame.vhdl Line: 107
+Warning (10492): VHDL Process Statement warning at enemy.vhdl(29): signal "random" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/brian/Projects/x/DodgeBall/enemy.vhdl Line: 29
+Info (12128): Elaborating entity "display" for hierarchy "SillyGame:theGame|display:display_component" File: /home/brian/Projects/x/DodgeBall/sillygame.vhdl Line: 108
+Info (12128): Elaborating entity "gameclock" for hierarchy "SillyGame:theGame|gameclock:gameclock_component" File: /home/brian/Projects/x/DodgeBall/sillygame.vhdl Line: 109
+Warning (10492): VHDL Process Statement warning at gameclock.vhdl(39): signal "isHit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/brian/Projects/x/DodgeBall/gameclock.vhdl Line: 39
+Warning (10631): VHDL Process Statement warning at gameclock.vhdl(27): inferring latch(es) for signal or variable "clockState", which holds its previous value in one or more paths through the process File: /home/brian/Projects/x/DodgeBall/gameclock.vhdl Line: 27
+Info (10041): Inferred latch for "gclkproc:clockState" at gameclock.vhdl(34) File: /home/brian/Projects/x/DodgeBall/gameclock.vhdl Line: 34
+Info (12128): Elaborating entity "randomizer" for hierarchy "SillyGame:theGame|randomizer:randomizer_component" File: /home/brian/Projects/x/DodgeBall/sillygame.vhdl Line: 110
+Info (12128): Elaborating entity "hittest" for hierarchy "SillyGame:theGame|hittest:hittest_component" File: /home/brian/Projects/x/DodgeBall/sillygame.vhdl Line: 111
+Info (12128): Elaborating entity "leddriver" for hierarchy "SillyGame:theGame|leddriver:leddriver_component" File: /home/brian/Projects/x/DodgeBall/sillygame.vhdl Line: 112
+Info (278001): Inferred 3 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SillyGame:theGame|display:display_component|Mod0" File: /home/brian/Projects/x/DodgeBall/display.vhdl Line: 26
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SillyGame:theGame|display:display_component|Div0" File: /home/brian/Projects/x/DodgeBall/display.vhdl Line: 48
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "SillyGame:theGame|gameclock:gameclock_component|Mult0" File: /home/brian/Projects/x/DodgeBall/gameclock.vhdl Line: 53
+Info (12130): Elaborated megafunction instantiation "SillyGame:theGame|display:display_component|lpm_divide:Mod0" File: /home/brian/Projects/x/DodgeBall/display.vhdl Line: 26
+Info (12133): Instantiated megafunction "SillyGame:theGame|display:display_component|lpm_divide:Mod0" with the following parameter: File: /home/brian/Projects/x/DodgeBall/display.vhdl Line: 26
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_25o.tdf
+    Info (12023): Found entity 1: lpm_divide_25o File: /home/brian/Projects/x/DodgeBall/QuartusFiles/db/lpm_divide_25o.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_4dg.tdf
+    Info (12023): Found entity 1: abs_divider_4dg File: /home/brian/Projects/x/DodgeBall/QuartusFiles/db/abs_divider_4dg.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ske.tdf
+    Info (12023): Found entity 1: alt_u_div_ske File: /home/brian/Projects/x/DodgeBall/QuartusFiles/db/alt_u_div_ske.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_t3c.tdf
+    Info (12023): Found entity 1: add_sub_t3c File: /home/brian/Projects/x/DodgeBall/QuartusFiles/db/add_sub_t3c.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
+    Info (12023): Found entity 1: add_sub_u3c File: /home/brian/Projects/x/DodgeBall/QuartusFiles/db/add_sub_u3c.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_8b9.tdf
+    Info (12023): Found entity 1: lpm_abs_8b9 File: /home/brian/Projects/x/DodgeBall/QuartusFiles/db/lpm_abs_8b9.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "SillyGame:theGame|display:display_component|lpm_divide:Div0" File: /home/brian/Projects/x/DodgeBall/display.vhdl Line: 48
+Info (12133): Instantiated megafunction "SillyGame:theGame|display:display_component|lpm_divide:Div0" with the following parameter: File: /home/brian/Projects/x/DodgeBall/display.vhdl Line: 48
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_fbo.tdf
+    Info (12023): Found entity 1: lpm_divide_fbo File: /home/brian/Projects/x/DodgeBall/QuartusFiles/db/lpm_divide_fbo.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_kbg.tdf
+    Info (12023): Found entity 1: abs_divider_kbg File: /home/brian/Projects/x/DodgeBall/QuartusFiles/db/abs_divider_kbg.tdf Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_she.tdf
+    Info (12023): Found entity 1: alt_u_div_she File: /home/brian/Projects/x/DodgeBall/QuartusFiles/db/alt_u_div_she.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_o99.tdf
+    Info (12023): Found entity 1: lpm_abs_o99 File: /home/brian/Projects/x/DodgeBall/QuartusFiles/db/lpm_abs_o99.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "SillyGame:theGame|gameclock:gameclock_component|lpm_mult:Mult0" File: /home/brian/Projects/x/DodgeBall/gameclock.vhdl Line: 53
+Info (12133): Instantiated megafunction "SillyGame:theGame|gameclock:gameclock_component|lpm_mult:Mult0" with the following parameter: File: /home/brian/Projects/x/DodgeBall/gameclock.vhdl Line: 53
+    Info (12134): Parameter "LPM_WIDTHA" = "32"
+    Info (12134): Parameter "LPM_WIDTHB" = "18"
+    Info (12134): Parameter "LPM_WIDTHP" = "50"
+    Info (12134): Parameter "LPM_WIDTHR" = "50"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_dks.tdf
+    Info (12023): Found entity 1: mult_dks File: /home/brian/Projects/x/DodgeBall/QuartusFiles/db/mult_dks.tdf Line: 31
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13014): Ignored 104 buffer(s)
+    Info (13016): Ignored 62 CARRY_SUM buffer(s)
+    Info (13019): Ignored 42 SOFT buffer(s)
+Info (13000): Registers with preset signals will power-up high File: /home/brian/Projects/x/DodgeBall/enemy.vhdl Line: 15
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "SillyGame:theGame|enemy:enemy1_component|enemy1.row~reg0" is converted into an equivalent circuit using register "SillyGame:theGame|enemy:enemy1_component|enemy1.row~reg0_emulated" and latch "SillyGame:theGame|enemy:enemy1_component|enemy1.row~1" File: /home/brian/Projects/x/DodgeBall/enemy.vhdl Line: 15
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: /home/brian/Projects/x/DodgeBall/DodgeBall.v Line: 14
+    Warning (13410): Pin "HEX1[7]" is stuck at VCC File: /home/brian/Projects/x/DodgeBall/DodgeBall.v Line: 15
+    Warning (13410): Pin "HEX2[7]" is stuck at VCC File: /home/brian/Projects/x/DodgeBall/DodgeBall.v Line: 16
+    Warning (13410): Pin "HEX3[7]" is stuck at VCC File: /home/brian/Projects/x/DodgeBall/DodgeBall.v Line: 17
+    Warning (13410): Pin "HEX4[7]" is stuck at VCC File: /home/brian/Projects/x/DodgeBall/DodgeBall.v Line: 18
+    Warning (13410): Pin "HEX5[7]" is stuck at VCC File: /home/brian/Projects/x/DodgeBall/DodgeBall.v Line: 19
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 12 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "MAX10_CLK1_50" File: /home/brian/Projects/x/DodgeBall/DodgeBall.v Line: 10
+    Warning (15610): No output dependent on input pin "MAX10_CLK2_50" File: /home/brian/Projects/x/DodgeBall/DodgeBall.v Line: 11
+    Warning (15610): No output dependent on input pin "SW[0]" File: /home/brian/Projects/x/DodgeBall/DodgeBall.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[1]" File: /home/brian/Projects/x/DodgeBall/DodgeBall.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[2]" File: /home/brian/Projects/x/DodgeBall/DodgeBall.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[3]" File: /home/brian/Projects/x/DodgeBall/DodgeBall.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[4]" File: /home/brian/Projects/x/DodgeBall/DodgeBall.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[5]" File: /home/brian/Projects/x/DodgeBall/DodgeBall.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[6]" File: /home/brian/Projects/x/DodgeBall/DodgeBall.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[7]" File: /home/brian/Projects/x/DodgeBall/DodgeBall.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[8]" File: /home/brian/Projects/x/DodgeBall/DodgeBall.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[9]" File: /home/brian/Projects/x/DodgeBall/DodgeBall.v Line: 29
+Info (21057): Implemented 2872 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 58 output pins
+    Info (21061): Implemented 2795 logic cells
+    Info (21062): Implemented 4 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 1008 megabytes
+    Info: Processing ended: Sun Mar 14 13:44:30 2021
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:00:55
+
+

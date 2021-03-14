@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Sun Mar 14 13:44:30 2021
+Quartus Prime Version : 16.1.2 Build 203 01/18/2017 SJ Lite Edition
+Revision Name : DodgeBall
+Top-level Entity Name : DodgeBall
+Family : MAX 10
+Total logic elements : 2,766
+    Total combinational functions : 2,764
+    Dedicated logic registers : 173
+Total registers : 173
+Total pins : 73
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 4
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

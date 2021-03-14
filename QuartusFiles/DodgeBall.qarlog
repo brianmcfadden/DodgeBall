@@ -1,0 +1,26 @@
+Quartus Prime Archive log --	/home/brian/Projects/x/DodgeBall/QuartusFiles/DodgeBall.qarlog
+
+Archive:	/home/brian/Projects/x/DodgeBall/QuartusFiles/DodgeBall.qar
+Date:		Sun Mar 14 13:47:33 2021
+Quartus Prime		16.1.2 Build 203 01/18/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/brian/Projects/x/DodgeBall/DodgeBall.v
+/home/brian/Projects/x/DodgeBall/QuartusFiles/DodgeBall.qpf
+/home/brian/Projects/x/DodgeBall/QuartusFiles/DodgeBall.qsf
+/home/brian/Projects/x/DodgeBall/QuartusFiles/DodgeBall.sdc
+/home/brian/Projects/x/DodgeBall/display.vhdl
+/home/brian/Projects/x/DodgeBall/enemy.vhdl
+/home/brian/Projects/x/DodgeBall/gameclock.vhdl
+/home/brian/Projects/x/DodgeBall/hittest.vhdl
+/home/brian/Projects/x/DodgeBall/inputcontroller.vhdl
+/home/brian/Projects/x/DodgeBall/leddriver.vhdl
+/home/brian/Projects/x/DodgeBall/player.vhdl
+/home/brian/Projects/x/DodgeBall/randomizer.vhdl
+/home/brian/Projects/x/DodgeBall/sillygame.vhdl
+/home/brian/Projects/x/DodgeBall/sillygamepack.vhdl
+/home/brian/intelFPGA_lite/16.1/quartus/linux64/assignment_defaults.qdf
+	======= Total: 15 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

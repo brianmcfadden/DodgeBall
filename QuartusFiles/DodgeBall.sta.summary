@@ -1,0 +1,221 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'ADC_CLK_10'
+Slack : -11.819
+TNS   : -513.807
+
+Type  : Slow 1200mV 85C Model Setup 'SillyGame:theGame|gameclock:gameclock_component|OUTCLK'
+Slack : -6.178
+TNS   : -317.329
+
+Type  : Slow 1200mV 85C Model Setup 'SillyGame:theGame|enemy:enemy1_component|PlayerScored'
+Slack : -2.793
+TNS   : -56.591
+
+Type  : Slow 1200mV 85C Model Setup 'KEY[0]'
+Slack : -0.028
+TNS   : -0.028
+
+Type  : Slow 1200mV 85C Model Hold 'KEY[0]'
+Slack : -0.475
+TNS   : -0.475
+
+Type  : Slow 1200mV 85C Model Hold 'SillyGame:theGame|gameclock:gameclock_component|OUTCLK'
+Slack : -0.258
+TNS   : -0.258
+
+Type  : Slow 1200mV 85C Model Hold 'SillyGame:theGame|enemy:enemy1_component|PlayerScored'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ADC_CLK_10'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'SillyGame:theGame|enemy:enemy1_component|PlayerScored'
+Slack : -3.099
+TNS   : -96.928
+
+Type  : Slow 1200mV 85C Model Recovery 'ADC_CLK_10'
+Slack : -2.623
+TNS   : -80.046
+
+Type  : Slow 1200mV 85C Model Recovery 'SillyGame:theGame|gameclock:gameclock_component|OUTCLK'
+Slack : -2.139
+TNS   : -66.902
+
+Type  : Slow 1200mV 85C Model Removal 'SillyGame:theGame|gameclock:gameclock_component|OUTCLK'
+Slack : 0.207
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'ADC_CLK_10'
+Slack : 2.287
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'SillyGame:theGame|enemy:enemy1_component|PlayerScored'
+Slack : 2.792
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ADC_CLK_10'
+Slack : -3.000
+TNS   : -106.822
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'KEY[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SillyGame:theGame|gameclock:gameclock_component|OUTCLK'
+Slack : -1.403
+TNS   : -94.001
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SillyGame:theGame|enemy:enemy1_component|PlayerScored'
+Slack : -1.403
+TNS   : -44.896
+
+Type  : Slow 1200mV 0C Model Setup 'ADC_CLK_10'
+Slack : -10.710
+TNS   : -465.258
+
+Type  : Slow 1200mV 0C Model Setup 'SillyGame:theGame|gameclock:gameclock_component|OUTCLK'
+Slack : -5.540
+TNS   : -285.903
+
+Type  : Slow 1200mV 0C Model Setup 'SillyGame:theGame|enemy:enemy1_component|PlayerScored'
+Slack : -2.390
+TNS   : -47.610
+
+Type  : Slow 1200mV 0C Model Setup 'KEY[0]'
+Slack : 0.184
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'KEY[0]'
+Slack : -0.574
+TNS   : -0.574
+
+Type  : Slow 1200mV 0C Model Hold 'SillyGame:theGame|gameclock:gameclock_component|OUTCLK'
+Slack : -0.249
+TNS   : -0.249
+
+Type  : Slow 1200mV 0C Model Hold 'ADC_CLK_10'
+Slack : 0.321
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'SillyGame:theGame|enemy:enemy1_component|PlayerScored'
+Slack : 0.321
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'SillyGame:theGame|enemy:enemy1_component|PlayerScored'
+Slack : -2.757
+TNS   : -86.384
+
+Type  : Slow 1200mV 0C Model Recovery 'ADC_CLK_10'
+Slack : -2.335
+TNS   : -71.248
+
+Type  : Slow 1200mV 0C Model Recovery 'SillyGame:theGame|gameclock:gameclock_component|OUTCLK'
+Slack : -1.873
+TNS   : -58.390
+
+Type  : Slow 1200mV 0C Model Removal 'SillyGame:theGame|gameclock:gameclock_component|OUTCLK'
+Slack : 0.306
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'ADC_CLK_10'
+Slack : 2.241
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'SillyGame:theGame|enemy:enemy1_component|PlayerScored'
+Slack : 2.731
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ADC_CLK_10'
+Slack : -3.000
+TNS   : -106.822
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'KEY[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SillyGame:theGame|gameclock:gameclock_component|OUTCLK'
+Slack : -1.403
+TNS   : -94.001
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SillyGame:theGame|enemy:enemy1_component|PlayerScored'
+Slack : -1.403
+TNS   : -44.896
+
+Type  : Fast 1200mV 0C Model Setup 'ADC_CLK_10'
+Slack : -4.415
+TNS   : -180.910
+
+Type  : Fast 1200mV 0C Model Setup 'SillyGame:theGame|gameclock:gameclock_component|OUTCLK'
+Slack : -2.140
+TNS   : -97.113
+
+Type  : Fast 1200mV 0C Model Setup 'SillyGame:theGame|enemy:enemy1_component|PlayerScored'
+Slack : -0.516
+TNS   : -5.646
+
+Type  : Fast 1200mV 0C Model Setup 'KEY[0]'
+Slack : 0.260
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'SillyGame:theGame|gameclock:gameclock_component|OUTCLK'
+Slack : -0.234
+TNS   : -0.234
+
+Type  : Fast 1200mV 0C Model Hold 'KEY[0]'
+Slack : 0.095
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'SillyGame:theGame|enemy:enemy1_component|PlayerScored'
+Slack : 0.151
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ADC_CLK_10'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'SillyGame:theGame|enemy:enemy1_component|PlayerScored'
+Slack : -1.521
+TNS   : -47.328
+
+Type  : Fast 1200mV 0C Model Recovery 'ADC_CLK_10'
+Slack : -1.321
+TNS   : -40.338
+
+Type  : Fast 1200mV 0C Model Recovery 'SillyGame:theGame|gameclock:gameclock_component|OUTCLK'
+Slack : -1.057
+TNS   : -33.498
+
+Type  : Fast 1200mV 0C Model Removal 'SillyGame:theGame|gameclock:gameclock_component|OUTCLK'
+Slack : -0.295
+TNS   : -0.590
+
+Type  : Fast 1200mV 0C Model Removal 'ADC_CLK_10'
+Slack : 0.673
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'SillyGame:theGame|enemy:enemy1_component|PlayerScored'
+Slack : 0.814
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ADC_CLK_10'
+Slack : -3.000
+TNS   : -89.500
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'KEY[0]'
+Slack : -3.000
+TNS   : -3.429
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SillyGame:theGame|gameclock:gameclock_component|OUTCLK'
+Slack : -1.000
+TNS   : -67.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SillyGame:theGame|enemy:enemy1_component|PlayerScored'
+Slack : -1.000
+TNS   : -32.000
+
+------------------------------------------------------------
